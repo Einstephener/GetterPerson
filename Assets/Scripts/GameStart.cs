@@ -26,7 +26,7 @@ public class GameStart : MonoBehaviour
     }
     public void ErrorMessage()
     {
-
+        GameManager.I.errorPanel.SetActive(true);
     }
     public void ChangeName()
     {
