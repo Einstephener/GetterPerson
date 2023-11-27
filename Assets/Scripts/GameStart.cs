@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,8 +23,14 @@ public class GameStart : MonoBehaviour
         GameManager.I.inGameUI.SetActive(true);
         GameManager.I.closeBtn.SetActive(true);
         ChangeName();
+        AddName();
 
     }
+    public void AddName()
+    {
+        GameManager.I.players.text = GameManager.I.tmpName.text;
+    }
+
     public void ErrorMessage()
     {
         GameManager.I.errorPanel.SetActive(true);
