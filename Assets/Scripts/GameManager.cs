@@ -7,9 +7,11 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public TalkManager talkManager;
     public static GameManager I;
     public GameObject settingPanel;
     public GameObject inGameUI;
+    public GameObject TalkUI;
     public GameObject errorPanel;
     public GameObject openBtn;
     public GameObject closeBtn;
