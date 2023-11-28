@@ -17,6 +17,7 @@ public class GameStart : MonoBehaviour
             ErrorMessage();
         }
     }
+    
     public void StartGame()
     {
         GameManager.I.settingPanel.SetActive(false);
@@ -28,7 +29,7 @@ public class GameStart : MonoBehaviour
     }
     public void AddName()
     {
-        GameManager.I.players.text = GameManager.I.tmpName.text;
+        GameManager.I.inGamePlayers.text = GameManager.I.tmpName.text;
     }
 
     public void ErrorMessage()

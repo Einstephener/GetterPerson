@@ -7,26 +7,31 @@ using UnityEngine.InputSystem;
 
 public class CharacterChoose : MonoBehaviour
 {
-    public Character character;
-    SpriteRenderer sr;
-    public CharacterChoose[] chars;
 
-    private void Start()
+    SpriteRenderer sr;
+
+    public void Choose(int id)
     {
-        sr = GetComponent<SpriteRenderer>();
-        if (CharacterManager.instance.currentCharacter == character) OnSelect();
-        else OnDeSelect();
-    }
-    private void OnMouseUpAsButton()
-    {
-        CharacterManager.instance.currentCharacter = character;
-        OnSelect();
-        for (int i = 0; i < chars.Length; i++)
+        GameManager.I.playerId = id;
+        if (GameManager.I.playerId == 0)
         {
-            if (chars[i]!= this) chars[i].OnDeSelect();
+            GameManager.I.Black.SetActive(true);
+            GameManager.I.Brown.SetActive(false);
+            GameManager.I.Red.SetActive(false);
+        }
+        else if (GameManager.I.playerId == 1)
+        {
+            GameManager.I.Black.SetActive(false);
+            GameManager.I.Brown.SetActive(true);
+            GameManager.I.Red.SetActive(false);
+        }
+        else if (GameManager.I.playerId == 2)
+        {
+            GameManager.I.Black.SetActive(false);
+            GameManager.I.Brown.SetActive(false);
+            GameManager.I.Red.SetActive(true);
         }
     }
-
     private void OnDeSelect()
     {
         sr.color = new Color(0.5f, 0.5f, 0.5f);

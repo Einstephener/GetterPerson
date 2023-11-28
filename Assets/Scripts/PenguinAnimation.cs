@@ -13,6 +13,7 @@ public class PenguinAnimation : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
     }
+
     private void Update()
     {
         UpdateState();

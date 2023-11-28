@@ -2,10 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Character
-{
-    Black, Brown, Red
-}
+
 public class CharacterManager : MonoBehaviour
 {
     
@@ -15,5 +12,5 @@ public class CharacterManager : MonoBehaviour
         if (instance == null) instance = this;
         else if (instance != null) return;
     }
-    public Character currentCharacter;
+
 }
