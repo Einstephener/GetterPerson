@@ -27,9 +27,9 @@
     * 실제 시간을 화면 왼쪽 위에 고정.
 
 ## Environment
-OS: Windows 10
-CPU: i5-10400
-RAM: 16GB
+- OS: Windows 10
+- CPU: i5-10400
+- RAM: 16GB
 
 ## Package
 <https://assetstore.unity.com/packages/2d/environments/pixel-art-top-down-basic-187605>
