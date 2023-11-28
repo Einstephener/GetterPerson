@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -16,14 +17,16 @@ public class GameManager : MonoBehaviour
     public TextMesh textMeshName;
     public TextMesh textMeshName1;
     public TextMesh textMeshName2;
+    public TextMesh tmpNPCName;
     public TMP_Text tmpName;
     public Text inGamePlayers;
+    public Text inGameNPCs;
     public SpriteRenderer Character;
     public GameObject Black;
     public GameObject Brown;
     public GameObject Red;
     public Image highlight;
-    public Transform target;               // Ä«¸Þ¶ó°¡ µû¶ó´Ù´Ò Å¸°Ù
+    public Transform target;              
     public Transform target0;
     public Transform target1;
     public Transform target2;
@@ -35,5 +38,13 @@ public class GameManager : MonoBehaviour
         I = this;
     }
 
-    
+    private void Start()
+    {
+        SettingNPCName();
+    }
+
+    private void SettingNPCName()
+    {
+        inGameNPCs.text = tmpNPCName.text;
+    }
 }
