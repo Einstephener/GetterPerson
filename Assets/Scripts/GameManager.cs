@@ -23,6 +23,10 @@ public class GameManager : MonoBehaviour
     public GameObject Brown;
     public GameObject Red;
     public Image highlight;
+    public Transform target;               // Ä«¸Þ¶ó°¡ µû¶ó´Ù´Ò Å¸°Ù
+    public Transform target0;
+    public Transform target1;
+    public Transform target2;
 
     public int playerId = 0;
 

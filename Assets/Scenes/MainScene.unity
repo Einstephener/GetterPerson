@@ -968,7 +968,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a2e27e6339943c48b60aca9c8eb1e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 870353736647739226}
   offsetX: 0
   offsetY: 0
   offsetZ: -10
@@ -83894,6 +83893,10 @@ MonoBehaviour:
   Brown: {fileID: 821963852}
   Red: {fileID: 434376748}
   highlight: {fileID: 2002856760}
+  target: {fileID: 0}
+  target0: {fileID: 0}
+  target1: {fileID: 0}
+  target2: {fileID: 0}
   playerId: 0
 --- !u!1 &1847857000
 GameObject:

@@ -11,12 +11,7 @@ public class CharacterChoose : MonoBehaviour
     {
         GameManager.I.playerId = id;
         Debug.Log("playerId 를 id로 변경");
-        MainCamera_Action mainCameraAction = GameManager.I.GetComponent<MainCamera_Action>();
-        if (mainCameraAction != null)
-        {
-            mainCameraAction.SetTargetByPlayerId(GameManager.I.playerId);
-            Debug.Log("Choose에서 Camera로");
-        }
+
         if (GameManager.I.playerId == 0)
         {
             Debug.Log("검정이 선택됨");
@@ -27,6 +22,7 @@ public class CharacterChoose : MonoBehaviour
             GameManager.I.Black.SetActive(true);
             GameManager.I.Brown.SetActive(false);
             GameManager.I.Red.SetActive(false);
+            GameManager.I.target = GameManager.I.target0;
         }
         else if (GameManager.I.playerId == 1)
         {
@@ -38,6 +34,7 @@ public class CharacterChoose : MonoBehaviour
             GameManager.I.Black.SetActive(false);
             GameManager.I.Brown.SetActive(true);
             GameManager.I.Red.SetActive(false);
+            GameManager.I.target = GameManager.I.target1;
         }
         else if (GameManager.I.playerId == 2)
         {
@@ -49,6 +46,7 @@ public class CharacterChoose : MonoBehaviour
             GameManager.I.Black.SetActive(false); 
             GameManager.I.Brown.SetActive(false);
             GameManager.I.Red.SetActive(true);
+            GameManager.I.target = GameManager.I.target2;
         }
     }
 
