@@ -7,11 +7,11 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public TalkManager talkManager;
     public static GameManager I;
     public GameObject settingPanel;
     public GameObject inGameUI;
-    public GameObject TalkUI;
+    public GameObject doYouTalkUI;
+    public GameObject talkUI;
     public GameObject errorPanel;
     public GameObject openBtn;
     public GameObject closeBtn;
@@ -22,7 +22,9 @@ public class GameManager : MonoBehaviour
     public TextMesh tmpNPCName;
     public TMP_Text tmpName;
     public Text inGamePlayers;
+    public Text WhoTalk;
     public Text inGameNPCs;
+    public Text talk;
     public SpriteRenderer Character;
     public GameObject Black;
     public GameObject Brown;
@@ -49,4 +51,5 @@ public class GameManager : MonoBehaviour
     {
         inGameNPCs.text = tmpNPCName.text;
     }
+
 }

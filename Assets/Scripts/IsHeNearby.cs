@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjData : MonoBehaviour
+public class IsHeNearby : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D NPC)
     {
         if (NPC.gameObject.name == "NPC")
         {
-            GameManager.I.TalkUI.SetActive(true);
+            GameManager.I.WhoTalk.text = NPC.gameObject.name;
+            GameManager.I.doYouTalkUI.SetActive(true);
         }
         
     }
@@ -16,7 +17,8 @@ public class ObjData : MonoBehaviour
     {
         if (NPC.gameObject.name == "NPC")
         {
-            GameManager.I.TalkUI.SetActive(false);
+            GameManager.I.doYouTalkUI.SetActive(false);
+            GameManager.I.talkUI.SetActive(false);
         }
     }
 }
