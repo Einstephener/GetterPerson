@@ -39,5 +39,7 @@ public class GameStart : MonoBehaviour
     public void ChangeName()
     {
         GameManager.I.textMeshName.text = GameManager.I.tmpName.text;
+        GameManager.I.textMeshName1.text = GameManager.I.tmpName.text;
+        GameManager.I.textMeshName2.text = GameManager.I.tmpName.text;
     }
 }

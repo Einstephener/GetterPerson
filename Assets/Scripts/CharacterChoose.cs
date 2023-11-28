@@ -7,38 +7,49 @@ using UnityEngine.InputSystem;
 
 public class CharacterChoose : MonoBehaviour
 {
-
-    SpriteRenderer sr;
-
     public void Choose(int id)
     {
         GameManager.I.playerId = id;
+        Debug.Log("playerId 를 id로 변경");
+        MainCamera_Action mainCameraAction = GameManager.I.GetComponent<MainCamera_Action>();
+        if (mainCameraAction != null)
+        {
+            mainCameraAction.SetTargetByPlayerId(GameManager.I.playerId);
+            Debug.Log("Choose에서 Camera로");
+        }
         if (GameManager.I.playerId == 0)
         {
+            Debug.Log("검정이 선택됨");
+            Vector2 position = GameManager.I.highlight.transform.localPosition;
+            position.x = -170;
+            position.y = -10;
+            GameManager.I.highlight.transform.localPosition = position;
             GameManager.I.Black.SetActive(true);
             GameManager.I.Brown.SetActive(false);
             GameManager.I.Red.SetActive(false);
         }
         else if (GameManager.I.playerId == 1)
         {
+            Debug.Log("갈색이 선택됨");
+            Vector2 position = GameManager.I.highlight.transform.localPosition;
+            position.x = 0;
+            position.y = -10;
+            GameManager.I.highlight.transform.localPosition = position;
             GameManager.I.Black.SetActive(false);
             GameManager.I.Brown.SetActive(true);
             GameManager.I.Red.SetActive(false);
         }
         else if (GameManager.I.playerId == 2)
         {
-            GameManager.I.Black.SetActive(false);
+            Debug.Log("빨강이 선택됨");
+            Vector2 position = GameManager.I.highlight.transform.localPosition;
+            position.x = 170;
+            position.y = -10;
+            GameManager.I.highlight.transform.localPosition = position;
+            GameManager.I.Black.SetActive(false); 
             GameManager.I.Brown.SetActive(false);
             GameManager.I.Red.SetActive(true);
         }
     }
-    private void OnDeSelect()
-    {
-        sr.color = new Color(0.5f, 0.5f, 0.5f);
-    }
 
-    void OnSelect()
-    {
-        sr.color = new Color(1f, 1f, 1f);
-    }
 }
