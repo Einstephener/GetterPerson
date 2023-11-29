@@ -25,12 +25,16 @@
     * 설정창과 참석중인 인원을 전부 볼 수 있는 UI창은 숨겼다가 펼칠 수 있음.
 - 현재 시간표시
     * 실제 시간을 화면 왼쪽 위에 고정.
+- NPC와 상호작용
+    * NPC 근처로 가면 상호작용 버튼이 생성
+    * 버튼 클릭시 NPC와 대화 가능.(일부만 구현)  
+      
 
-## Environment
+## 개발환경
 - OS: Windows 10
 - CPU: i5-10400
 - RAM: 16GB
 
-## Package
+## 사용한 에셋
 <https://assetstore.unity.com/packages/2d/environments/pixel-art-top-down-basic-187605>
 <https://assetstore.unity.com/packages/2d/characters/2d-character-sprite-animation-penguin-236747>
